@@ -1,0 +1,89 @@
+# csc123
+projects for c++ class
+#include <iostream>
+#include <string>
+
+using namespace std;
+int main(void)
+
+{
+    const int M(1000), CM(900), D(500), CD(400), C(100), XC(90);
+    const int L(50), XL(40), X(10), IX(9), V(5), IV(4), I(1);
+    int decimal(0), number(0);
+    string roman("");
+
+    cout << "Please enter a integer between 1 and 3999: ";
+    cin >> decimal;
+    number = decimal;
+
+    while (decimal > 0)
+    {
+        if (decimal >= M)
+        {
+            roman += "M";
+            decimal = decimal - M;
+        }
+        else if (decimal >= CM)
+        {
+            roman += "CM";
+            decimal = decimal - CM;
+        }
+        else if (decimal >= D)
+        {
+            roman += "D";
+            decimal = decimal - D;
+        }
+        else if (decimal >= CD)
+        {
+            roman += "CD";
+            decimal = decimal - CD;
+        }
+        else if (decimal >= C)
+        {
+            roman += "C";
+            decimal = decimal - C;
+        }
+        else if (decimal >= XC)
+        {
+            roman += "XC",
+            decimal = decimal - XC;
+        }
+        else if (decimal >= L)
+        {
+            roman += "L";
+            decimal = decimal - L;
+        }
+        else if (decimal >= XL)
+        {
+            roman += "XL";
+            decimal = decimal - XL;
+        }
+        else if (decimal >= X)
+        {
+            roman += "X";
+            decimal = decimal - X;
+        }
+        else if (decimal >= IX)
+        {
+            roman += "IX";
+            decimal = decimal - IX;
+        }
+        else if (decimal >= V)
+        {
+            roman += "V";
+            decimal = decimal - V;
+        }
+        else if (decimal >= IV)
+        {
+            roman += "IV",
+            decimal = decimal - IV;
+        }
+        else if (decimal >= I)
+        {
+            roman += "I";
+            decimal = decimal - I;
+        }
+    }
+    cout << "The Decimal Number " << number << " converted to Roman Numerals is " << roman << endl;
+    return 0;
+}
